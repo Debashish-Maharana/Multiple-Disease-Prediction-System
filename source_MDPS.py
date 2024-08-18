@@ -1,13 +1,13 @@
 import streamlit as st
 import numpy as np
 from streamlit_option_menu import option_menu
-import pickle  # used for saving & loading your trained ML model.
+import joblib  # used for saving & loading your trained ML model.
 import time
 # Loading our ML Models.
 # model which will predict Heart Disease
-heart_disease_predict_model = pickle.load(open("heart_disease_prediction_model.sav", 'rb'))
+heart_disease_predict_model = joblib.load(open("heart_disease_prediction_model.sav", 'rb'))
 # model which will predict Diabetes
-diabetes_predict_model = pickle.load(open("Diabetes_prediction_model.sav", 'rb'))
+diabetes_predict_model = joblib.load(open("Diabetes_prediction_model.sav", 'rb'))
 
 
 # For computing prediction of Heart Disease with the help of it's corresponding loaded trained model(i.e. heart_disease_predict_model)
